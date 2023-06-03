@@ -1,8 +1,8 @@
 ---
 slug: discord-rpc-customize
-title: 2022 年如何自定義 Discord 遊戲狀態（Rich Presence）
+title: 2022 年如何自訂 Discord 遊戲狀態（Rich Presence）
 authors: [kay]
-description: "Discord 遊戲狀態是一個可以顯示你目前狀態更多資訊的東西，可以看到朋友都能顯示他在玩什麼遊戲、正在用什麼程式語言和 IDE 寫程式。此文章會教大家使用 Python、JavaScript、TypeScript、C# 來設定 Discord 豐富狀態的多種方法！"
+description: "Discord 遊戲狀態是一個可以顯示你目前狀態更多資訊的東西，可以看到朋友都能顯示他在玩什麼遊戲、正在用什麼程式語言和 IDE 寫程式。此文章會教大家使用 Python、JavaScript、TypeScript 和 C# 來設定 Discord 豐富狀態的多種方法！"
 tags:
   [
 	"Discord",
@@ -17,7 +17,7 @@ image: /blog/discord-rpc-customize/discord-rpc-customize.jpeg
 
 import { Adsense, Info, Warning } from "@components/mdx";
 
-![Discord 自定義 遊戲狀態](@static/blog/discord-rpc-customize/discord-rpc-customize.jpeg)
+![Discord 自訂遊戲狀態](@static/blog/discord-rpc-customize/discord-rpc-customize.jpeg)
 
 Discord Rich Presence 是一個可以顯示你目前狀態更多資訊的東西，可以看到朋友都能顯示他在玩什麼遊戲、正在用什麼程式語言和 IDE 寫程式。此文章會教大家使用 Python、JavaScript、TypeScript、C# 來設定 Discord 豐富狀態（Rich Presence）的多種方法，讓你的朋友或伺服器成員更知道您現在在做什麼！
 
@@ -40,9 +40,9 @@ Discord Rich Presence 是一個可以顯示你目前狀態更多資訊的東西�
 
 ### Visual Studio Code
 
-Visual Studio Code 是一款微軟開發的一款非常好用的一款編輯器，除了 Git、Debug 功能外，還有非常大的主題與延伸模組庫，連 Discord Rich Presence 都有非常多的延伸模組！以下就為各位介紹如何安裝與設定：
+Visual Studio Code 是一款微軟開發的一款非常好用的一款編輯器，除了 Git、除錯功能外，還有非常大的主題與延伸模組庫，連 Discord Rich Presence 都有非常多的延伸模組！以下就為各位介紹如何安裝與設定：
 
-首先，請先前往延伸模組商店，並在搜尋中輸入「Discord Rich Presence」，它會列出相關延伸模組，找到自己喜歡的模組後，請按下安裝按鈕進行安裝 （在此我安裝這張圖中的第二個）
+首先，請先前往延伸模組商店，並在搜尋中輸入「Discord Rich Presence」，它會列出相關延伸模組，找到自己喜歡的模組後，請按下安裝按鈕進行安裝（在此我安裝這張圖中的第 2 個）
 
 ![Vscode Discord Rich Presence Extension](@static/blog/discord-rpc-customize/vscode-presence-extension.jpg)
 
@@ -66,7 +66,7 @@ IntelliJ IDEA 的話是由 JetBrains 公司開發的一款整合式開發環境�
 
 #### 安裝插件
 
-首先請按下鍵盤上的 `Ctrl` + `Shift` + `S` 開啟設定視窗，Mac 版本則是 `Shift` + `Command` + `,` 快捷鍵，並點選左側 `Plugins` 前往插件管理頁面，
+首先請按下鍵盤上的 `Ctrl` + `Shift` + `S` 開啟設定視窗，mac 版本則是 `Shift` + `Command` + `,` 快捷鍵，並點選左側 `Plugins` 前往插件管理頁面，
 
 ![JetBrains Settings](@static/blog/discord-rpc-customize/jetbrains-settings.png)
 
@@ -221,7 +221,7 @@ pip install pypresence
 
 安裝完成後，請在您覺得適合的地方建立一個 Python 檔案
 
-![Vscode create file](@static/blog/discord-rpc-customize/create-a-python-file.png)
+![VScode Create File](@static/blog/discord-rpc-customize/create-a-python-file.png)
 
 #### 開始撰寫程式碼
 
@@ -289,7 +289,7 @@ npm i discord-rpc
 <Warning title="我想先警告你">
   如果您不知道如何建立專案或安裝模組，請參考 [《使用 discord.js 快速建立一個
   Discord
-  骰子機器人》](/blog/discordjs-dice-bot/)，在此因為篇幅關係，所以我就不講解了
+  骰子機器人》](/blog/discordjs-dice-bot)，在此因為篇幅關係，所以我就不講解了
 </Warning>
 
 #### 開始撰寫程式碼
@@ -315,7 +315,7 @@ import { Client } from "discord-rpc";
 
 </Info>
 
-再來，寫一個 `ready` 事件監聽器，當 RPC 客戶端成功上線後，將您的 Rich Presence 修改成您指定的資訊，
+再來，寫一個 `ready` 事件監聽器，當 RPC 用戶端成功上線後，將您的 Rich Presence 修改成您指定的資訊，
 
 ```js showLineNumbers
 rpcClient.on("ready", () => {
@@ -334,7 +334,7 @@ rpcClient.on("ready", () => {
 });
 ```
 
-最後，再讓 RPC 客戶端連線。
+最後，再讓 RPC 用戶端連線。
 
 ```js showLineNumbers
 rpcClient.login({ clientId: "應用程式 ID" });
@@ -350,7 +350,7 @@ C# 是一個由 C 和 C++ 衍生出來的物件導向程式語言，不僅消除
 
 有些人或許會覺得：C# 架構跟 Java 一樣，剛開始就會看到 Class，跟一些其他程式語言相比，不太平易近人，
 
-但其實到了.NET 6.0 後，你會發現它架構會跟 JavaScript / TypeScript 一樣，程式會跟 JavaScript 一樣直接從第一行開始執行，並且同樣支援頂層 `await`。
+但其實到了 .NET 6.0 後，你會發現它架構會跟 JavaScript / TypeScript 一樣，程式會跟 JavaScript 一樣直接從第一行開始執行，並且同樣支援頂層 `await`。
 
 #### 建立專案與安裝模組
 
@@ -395,7 +395,7 @@ client.OnReady += (sender, eventArgs) =>  // Ready監聽器
 };
 ```
 
-然後初始化客戶端連線
+然後初始化用戶端連線
 
 ```csharp showLineNumbers
 client.Initialize();
