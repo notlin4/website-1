@@ -1,6 +1,6 @@
 ---
-title: 自定義組件
-description: 利用自定義組件改進你的文章!
+title: 自訂組件
+description: 利用自訂組件改進你的文章!
 ---
 
 import { Tabs, Tab, FileTree } from "nextra-theme-docs";
@@ -17,11 +17,11 @@ import {
 import { BsDownload } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-# 自定義組件
+# 自訂組件
 
-你可以利用自定義組件改進你的文章
+你可以利用自訂組件改進你的文章
 
-使用 `import { ... } from "@components/mdx"` 輕鬆導入自定義組件!
+使用 `import { ... } from "@components/mdx"` 輕鬆導入自訂組件!
 
 ## Accordion
 
@@ -32,16 +32,16 @@ import { Accordion } from "@components/mdx";
 
 **這裡有一條鯊魚**
 
-<Accordion title="Money是一隻鯊魚">Yeahhhhh</Accordion>;
+<Accordion title="Money 是一隻鯊魚">Yeahhhhh</Accordion>;
 ```
 
 **這裡有一條鯊魚**
 
-<Accordion title="Money是一隻鯊魚">Yeahhhhh</Accordion>
+<Accordion title="Money 是一隻鯊魚">Yeahhhhh</Accordion>
 
 ## Admonition
 
-想給使用者提示或警告? 你可以使用 `Admonition` 組件
+想給使用者提示或警告？你可以使用 `Admonition` 組件
 
 它支持多種類型：`Tip`、`Warning`、`Info`、`Error`：
 
@@ -78,9 +78,9 @@ import { Card } from "@components/mdx";
   className="mt-2"
 />
 
-## 鏈接按鈕
+## 連結按鈕
 
-插入網址太難看？您可以使用按鈕代替它!
+插入網址太難看？您可以使用按鈕代替它！
 
 <Info>_你可能需要 `w-fit` 否則按鈕會太寬_</Info>
 
@@ -135,7 +135,7 @@ import { LinkButton } from "@components/mdx";
 
 當您編寫教學文件時，此組件對於顯示每個步驟之間的關係非常有用
 
-您可以輕鬆地使用 `className` 來達到這個效果，使用 `###` (h3) 標題添加一個步驟：
+您可以輕鬆地使用 `className` 來達到這個效果，使用 `###` (h3) 標題新增一個步驟：
 
 ```mdx
 <div className='steps-container'>
@@ -194,12 +194,12 @@ I don't know programming
 
 I don't know programming
 
-  </Tab>
+</Tab>
 </Tabs>
 
-## 文件列表
+## 檔案列表
 
-顯示文件和文件夾，對於教程很有用
+顯示檔案和資料夾，對於教學很有用
 
 ```mdx
 import { FileTree } from "nextra-theme-docs";
@@ -223,7 +223,7 @@ import { FileTree } from "nextra-theme-docs";
 ```
 
 <FileTree>
-  <FileTree.Folder name="你的文件" defaultOpen>
+  <FileTree.Folder name="你的檔案" defaultOpen>
     <FileTree.Folder name="frameworks" defaultOpen>
       <FileTree.File name="react.mdx" />
       <FileTree.File name="svelte.mdx" />
@@ -256,7 +256,7 @@ Mdx 能夠與 React 和 Next.js 一起使用，您可以在 `.mdx` 檔案中使�
 - `nextra`
 - `nextra-docs-theme`
 
-### 自定義組件 (Tailwind CSS)
+### 自訂組件（Tailwind CSS）
 
 ```jsx
 <div className="border-2 border-black p-3 dark:border-white">Hello World</div>
@@ -272,7 +272,7 @@ Mdx 能夠與 React 和 Next.js 一起使用，您可以在 `.mdx` 檔案中使�
   <Card
     href="https://www.framer.com/docs/"
     target="_blank"
-    title="他們的文檔"
+    title="它們的文檔"
   />
 </Cards>
 
